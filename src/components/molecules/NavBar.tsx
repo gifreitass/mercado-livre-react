@@ -1,13 +1,14 @@
 import NavegationTitle from "../atoms/NavegationTitle"
+import { DivNavBar } from "../../styled-components"
 
 const NavBar: React.FC = () => {
     return (
-        <div>
+        <DivNavBar>
             <NavegationTitle>Categorias</NavegationTitle>
             <NavegationTitle>Ofertas do dia</NavegationTitle>
             <NavegationTitle>Histórico</NavegationTitle>
             <NavegationTitle>Moda</NavegationTitle>
-        </div>
+        </DivNavBar>
     )
 }
 

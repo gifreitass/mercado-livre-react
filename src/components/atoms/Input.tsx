@@ -1,6 +1,8 @@
+import { InputStyle } from "../../styled-components"
+
 const Input: React.FC = () => {
     return(
-        <input type="text"/>
+        <InputStyle type="text"/>
     )
 }
 

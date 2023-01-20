@@ -1,10 +1,11 @@
 import Input from "../atoms/Input"
+import { DivSearchBar } from "../../styled-components"
 
 const SearchBar: React.FC = () => {
     return (
-        <div>
+        <DivSearchBar>
             <Input />
-        </div>
+        </DivSearchBar>
     )
 }
 
