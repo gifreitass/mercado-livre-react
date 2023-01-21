@@ -2,15 +2,18 @@ import { Img } from "../../styled-components"
 import { DivProduct } from "../../styled-components"
 
 const Product: React.FC<{
-    src: string,
-    p: string,
-    h4: string
+    imagem: string,
+    nome: string,
+    valor: number,
+    marca: string,
+    categoria: string
 }> = (props) => {
     return (
         <DivProduct>
-            <Img src={props.src} />
-            <p>{props.p}</p>
-            <h4>{props.h4}</h4>
+            <Img src={props.imagem} />
+            <p>{props.nome}</p>
+            <h4>R${props.valor}</h4>
+            <p>{props.marca} - {props.categoria}</p>
         </DivProduct>
     )
 }

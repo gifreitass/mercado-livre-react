@@ -34,6 +34,16 @@ export const DivInformation = styled.div`
     border-radius: 10px
 `
 
+export const DivInputSelect = styled.div`
+    display: flex;
+    justify-content: center
+`
+
+export const InputSelectStyle = styled.select`
+    border-radius: 3px;
+    padding: 10px
+`
+
 export const Img = styled.img`
     width: 250px;
     height: 250px
@@ -42,16 +52,21 @@ export const Img = styled.img`
 export const DivProduct = styled.div`
     background-color: white;
     width: 300px;
-    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 5px
+    justify-content: center;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 15px
 `
 
 export const DivProductSection = styled.div`
-    margin: 50px auto;
+    margin: 50px auto 0 auto;
     display: flex;
     justify-content: space-around;
-    width: 80vw;    
+    width: 80vw; 
+    flex-wrap: wrap;
+    gap: 20px
 `
