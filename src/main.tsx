@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import App from './pages/App'
 import { createGlobalStyle } from 'styled-components'
+import { BrowserRouter, Routes } from 'react-router-dom'
+import { Route } from 'react-router'
+import Cadastro from './pages/Cadastro'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,7 +16,12 @@ const GlobalStyle = createGlobalStyle`
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <GlobalStyle />
-    <App />
-  </React.StrictMode>,
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App />}/>
+        <Route path='/cadastro' element={<Cadastro />} />
+      </Routes>
+      <GlobalStyle />
+    </BrowserRouter>
+  </React.StrictMode>
 )

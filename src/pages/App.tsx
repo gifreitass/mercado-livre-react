@@ -1,4 +1,4 @@
-import Homepage from "./components/templates/Homepage"
+import Homepage from "../components/templates/Homepage"
 import styled from "styled-components"
 
 function App() {
