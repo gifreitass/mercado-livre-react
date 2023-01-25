@@ -18,13 +18,13 @@ const Homepage: React.FC = () => {
     const[products, setProducts] = useState<iGetProductsResponse[]>([])
     const[priceProduct, setPriceProduct] = useState<string>('less')
 
-    const fetchProducts: () => Promise<void> = async () => {
+    const getProducts: () => Promise<void> = async () => {
         const response = await axios.get("https://apigenerator.dronahq.com/api/C9D5jR1z/mercadoLivre")
         setProducts(response.data)
     }
 
     useEffect(() => {
-        fetchProducts()
+        getProducts()
     }, [])
 
     const handleClick = (evt: React.ChangeEvent<HTMLSelectElement>) => {

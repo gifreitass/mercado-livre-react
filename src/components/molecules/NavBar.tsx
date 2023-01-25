@@ -1,13 +1,12 @@
 import NavegationTitle from "../atoms/NavegationTitle"
-import { DivNavBar } from "../../styled-components"
+import { DivNavBar, LinkNavBar } from "../../styled-components"
+import { Link } from "react-router-dom"
 
 const NavBar: React.FC = () => {
     return (
         <DivNavBar>
-            <NavegationTitle>Categorias</NavegationTitle>
-            <NavegationTitle>Ofertas do dia</NavegationTitle>
-            <NavegationTitle>Histórico</NavegationTitle>
-            <NavegationTitle>Moda</NavegationTitle>
+            <LinkNavBar to='/'><NavegationTitle>Produtos</NavegationTitle></LinkNavBar>
+            <LinkNavBar to='/cadastro'><NavegationTitle>Cadastro</NavegationTitle></LinkNavBar>
         </DivNavBar>
     )
 }

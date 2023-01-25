@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import { Link } from "react-router-dom"
 
 export const InputStyle = styled.input`
     border-radius: 3px;
@@ -14,9 +15,21 @@ const sharedDivStyle = css`
     font-size: 20px;
 `
 
+const sharedInputStyle = css`
+    border-radius: 3px;
+`
+
 export const DivSearchBar = styled.div`
     ${sharedDivStyle}
     justify-content: center;
+`
+
+export const LetterNavBar = styled.p`
+    color: black;
+`
+
+export const LinkNavBar = styled(Link)`
+    text-decoration: none
 `
 
 export const DivNavBar = styled.div`
@@ -40,8 +53,7 @@ export const DivInputSelect = styled.div`
 `
 
 export const InputSelectStyle = styled.select`
-    border-radius: 3px;
-    padding: 10px
+    ${sharedInputStyle}
 `
 
 export const Img = styled.img`
@@ -70,3 +82,29 @@ export const DivProductSection = styled.div`
     flex-wrap: wrap;
     gap: 20px
 `
+
+export const FormNewProduct = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px
+`
+
+export const ParagraphNewProduct = styled.p`
+    font-size: 20px;
+    font-weight: 600 
+`
+
+export const InputNewProduct = styled.input`
+    ${sharedInputStyle}
+`
+export const ButtonNewProduct = styled.button`
+    padding: 5px;
+    margin-top: 20px;
+    cursor: pointer
+`
+
+export const LabelNewProduct = styled.label`
+    margin-top: 10px
+`
+
