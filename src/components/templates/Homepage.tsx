@@ -17,6 +17,7 @@ export interface iGetProductsResponse{
 const Homepage: React.FC = () => {
     const[products, setProducts] = useState<iGetProductsResponse[]>([])
     const[priceProduct, setPriceProduct] = useState<string>('less')
+    const [findProduct, setFindProduct] = useState<string>('')
 
     const getProducts: () => Promise<void> = async () => {
         const response = await axios.get("https://apigenerator.dronahq.com/api/C9D5jR1z/mercadoLivre")
@@ -33,10 +34,10 @@ const Homepage: React.FC = () => {
 
     return (
         <>
-            <Header />
+            <Header findProduct={findProduct} setFindProduct={setFindProduct} />
             <InformationSection />
             <InputSelect onChange={handleClick} />
-            <ProductSection productsList={products} priceProduct={priceProduct} />
+            <ProductSection productsList={products} priceProduct={priceProduct} findProduct={findProduct} />
         </>
     )
 }
