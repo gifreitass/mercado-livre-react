@@ -1,10 +1,12 @@
 import Input from "../atoms/Input"
 import { DivSearchBar } from "../../styled-components"
 
-const SearchBar: React.FC<{ findProduct: string, setFindProduct: any }> = (props) => {
+const SearchBar: React.FC<{ findProduct: string, setFindProduct: React.Dispatch<React.SetStateAction<string>> }> = (props) => {
     return (
         <DivSearchBar>
-            <Input findProduct={props.findProduct} setFindProduct={props.setFindProduct} />
+            {props.setFindProduct &&
+                <Input findProduct={props.findProduct} setFindProduct={props.setFindProduct} />
+            }
         </DivSearchBar>
     )
 }
